@@ -16,6 +16,7 @@ try:
     for repo in request.repos:
         userRepo = Repository(git_user=request.user, repo_name=repo["name"], URL=repo["html_url"])
         userRepo.save()
-        print("Successfully inserted data in collection!\n")
+    print("Successfully inserted data in collection!\n")
+    
 except Exception as e:
     print(f"Error stablishing connection, verify the following error and try again later:\n{e}\n")
